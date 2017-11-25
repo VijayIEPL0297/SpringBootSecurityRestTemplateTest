@@ -29,7 +29,13 @@ public class TopicController {
 		Topic topic = topicService.getTopicById(id);
 		return new ResponseEntity<Topic>(topic, HttpStatus.OK);
 	}
-	
+
+	/**
+	 * This method used to add a topic
+	 * @param topic
+	 * @param builder
+	 * @return
+	 */
 	@PostMapping("/topic")
 	public ResponseEntity<String> addTopic(@RequestBody Topic topic, UriComponentsBuilder builder) {
         boolean flag = topicService.addTopic(topic);
