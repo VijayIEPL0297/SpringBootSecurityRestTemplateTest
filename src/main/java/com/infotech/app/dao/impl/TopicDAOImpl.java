@@ -26,6 +26,7 @@ public class TopicDAOImpl implements TopicDAO {
 	@Override
 	public List<Topic> getAllTopics() {
 		String HQL = "FROM Topic as t ORDER BY t.topicId";
+		//dfgdfdhfgj
 		return (List<Topic>) entityManager.createQuery(HQL).getResultList();
 	}	
 	
